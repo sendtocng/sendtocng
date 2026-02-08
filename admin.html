@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Cryptonews.global</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <h1>ADMIN PANEL</h1>
+            </div>
+            <div class="tagline">
+                <h2>Add and manage your articles</h2>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="admin-layout">
+            <!-- Article Form -->
+            <section class="article-form-section">
+                <h3 class="section-title">Add New Article</h3>
+                
+                <form id="article-form" class="article-form">
+                    <div class="form-group">
+                        <label for="article-title">Article Title *</label>
+                        <input 
+                            type="text" 
+                            id="article-title" 
+                            name="title" 
+                            required
+                            placeholder="How Solana is Changing the Way We Transact"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="article-summary">Article Summary *</label>
+                        <textarea 
+                            id="article-summary" 
+                            name="summary" 
+                            required
+                            rows="3"
+                            placeholder="Learn about instant P2P, P2B and B2B transfers..."
+                        ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="article-date">Publication Date *</label>
+                        <input 
+                            type="date" 
+                            id="article-date" 
+                            name="date" 
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="article-image">Image URL *</label>
+                        <input 
+                            type="url" 
+                            id="article-image" 
+                            name="image" 
+                            required
+                            placeholder="https://images.unsplash.com/photo-..."
+                        >
+                        <small>Tip: Use Unsplash or Pexels for free stock images</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="article-tags">Tags (comma separated) *</label>
+                        <input 
+                            type="text" 
+                            id="article-tags" 
+                            name="tags" 
+                            required
+                            placeholder="Bitcoin, DeFi, Education"
+                        >
+                        <small>Enter tags separated by commas (e.g., Bitcoin, DeFi, NFTs)</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="article-content">Full Article Content</label>
+                        <textarea 
+                            id="article-content" 
+                            name="content" 
+                            rows="10"
+                            placeholder="The full article text goes here..."
+                        ></textarea>
+                        <small>Optional: Add the full article content for future use</small>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">Add Article</button>
+                        <button type="button" class="reset-btn" id="reset-form">Clear Form</button>
+                    </div>
+                </form>
+
+                <div id="form-message" class="form-message"></div>
+            </section>
+
+            <!-- Article Management -->
+            <section class="article-management">
+                <h3 class="section-title">Manage Articles</h3>
+                
+                <div class="management-controls">
+                    <button class="action-btn" id="view-all">View All Articles</button>
+                    <button class="action-btn danger" id="clear-all">Clear All Articles</button>
+                    <button class="action-btn" id="reset-defaults">Reset to Defaults</button>
+                </div>
+
+                <div id="article-list" class="article-list">
+                    <!-- Articles will be loaded here -->
+                </div>
+            </section>
+        </div>
+
+        <!-- Quick Links -->
+        <section class="quick-links">
+            <a href="index.html" class="link-btn">← Back to Homepage</a>
+            <a href="https://unsplash.com" target="_blank" class="link-btn">Find Images on Unsplash</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Cryptonews.global - Admin Panel</p>
+        </div>
+    </footer>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="delete-modal" class="share-modal">
+        <div class="share-content">
+            <button class="close-modal" id="close-delete">&times;</button>
+            <h4>Delete Article?</h4>
+            <p style="margin-bottom: 20px; color: var(--gray);">This action cannot be undone.</p>
+            <div class="share-buttons">
+                <button class="share-btn danger" id="confirm-delete">Yes, Delete</button>
+                <button class="share-btn" id="cancel-delete">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="articles.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

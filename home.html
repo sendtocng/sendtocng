@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptonews.global - Crypto News by Normies for Normies</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <h1>CRYPTONEWS<span>.GLOBAL</span></h1>
+            </div>
+            <div class="tagline">
+                <h2>Crypto News and Updates<br><span class="highlight">by Normies for Normies</span></h2>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Recent News Section -->
+        <section class="recent-news">
+            <h3 class="section-title">Latest Drops</h3>
+            <div id="recent-articles" class="article-grid">
+                <!-- Recent articles will be loaded here -->
+            </div>
+        </section>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="search-input" 
+                    placeholder="Search articles, chains, topics..." 
+                    autocomplete="off"
+                >
+                <div class="search-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </div>
+            </div>
+            <div id="search-results" class="search-results"></div>
+        </section>
+
+        <!-- Past Articles Section -->
+        <section class="past-articles">
+            <h3 class="section-title">Archive</h3>
+            <div id="past-articles" class="article-grid">
+                <!-- Past articles will be loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Cryptonews.global - All chains, all perspectives</p>
+            <div class="footer-links">
+                <a href="admin.html">Admin</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Share Modal -->
+    <div id="share-modal" class="share-modal">
+        <div class="share-content">
+            <button class="close-modal">&times;</button>
+            <h4>Share this article</h4>
+            <div class="share-buttons">
+                <button class="share-btn twitter" data-platform="twitter">
+                    <span>𝕏</span> Share on X
+                </button>
+                <button class="share-btn reddit" data-platform="reddit">
+                    <span>🔗</span> Share on Reddit
+                </button>
+                <button class="share-btn copy" data-platform="copy">
+                    <span>📋</span> Copy Link
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="articles.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
