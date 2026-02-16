@@ -252,3 +252,58 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Get related articles based on tags
+function getRelatedArticles(currentArticleId, tags, limit = 3) {
+    const allArticles = loadArticles();
+    const currentArticle = allArticles.find(a => a.id === currentArticleId);
+    
+    if (!currentArticle) return [];
+    
+    // Score articles by tag overlap
+    const scored = allArticles
+        .filter(a => a.id !== currentArticleId)
+        .map(article => {
+            const overlap = article.tags.filter(tag => currentArticle.tags.includes(tag)).length;
+            return { ...article, score: overlap };
+        })
+        .sort((a, b) => b.score - a.score);
+    
+    return scored.slice(0, limit);
+}
+
+// Render related articles
+function renderRelatedArticles() {
+    const container = document.getElementById('related-articles');
+    if (!container) return;
+    
+    const articleId = container.dataset.articleId;
+    const tags = container.dataset.tags.split(',');
+    
+    const related = getRelatedArticles(parseInt(articleId), tags);
+    
+    if (related.length === 0) {
+        container.style.display = 'none';
+        return;
+    }
+    
+    container.innerHTML = `
+        <h3>Related Articles</h3>
+        <div class="related-grid">
+            ${related.map(article => `
+                <a href="${articleUrls[article.id] || 'article.html?id=' + article.id}" class="related-card">
+                    <img src="${article.image}" alt="${article.title}" class="related-card-image">
+                    <div class="related-card-content">
+                        <div class="related-card-title">${article.title}</div>
+                        <div class="related-card-date">${formatDate(article.date)}</div>
+                    </div>
+                </a>
+            `).join('')}
+        </div>
+    `;
+}
+
+// Initialize related articles
+document.addEventListener('DOMContentLoaded', function() {
+    renderRelatedArticles();
+});
