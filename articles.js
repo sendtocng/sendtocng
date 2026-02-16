@@ -3,6 +3,15 @@
 
 const articles = [
     {
+        id: 5,
+        title: "How to Spot a Crypto Scam in 2026",
+        summary: "I would never point you toward a scam. But not everyone is me. Here's how to spot crypto scams before they take your money.",
+        date: "2026-02-16",
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+        tags: ["Security", "Scams", "Education"],
+        content: ``
+    },
+    {
         id: 1,
         title: "Bitcoin Just Hit $70K — Here's Why It Matters",
         summary: "Bitcoin crossed a major milestone. Here's what it means for everyday people and why the mainstream is finally paying attention.",
