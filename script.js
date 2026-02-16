@@ -70,7 +70,7 @@ function createHeroCard(article) {
             <h2 class="hero-title">${article.title}</h2>
             <p class="hero-summary">${article.summary}</p>
             <div class="hero-tags">${tagsHTML}</div>
-            <a href="${articleUrl}" class="hero-cta">
+            <a href="${articleUrl}" class="hero-cta" onclick="saveScrollPosition();">
                 Read Article
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -84,9 +84,10 @@ function createHeroCard(article) {
 function createArticleCard(article) {
     const formattedDate = formatDate(article.date);
     const tagsHTML = article.tags.slice(0, 2).map(tag => `<span class="tag-sm" onclick="filterByTag('${tag}'); event.stopPropagation();">${tag}</span>`).join('');
+    const articleUrl = articleUrls[article.id] || 'article.html?id=' + article.id;
     
     return `
-        <div class="article-card" data-article-id="${article.id}">
+        <div class="article-card" data-article-id="${article.id}" onclick="saveScrollPosition(); window.location.href='${articleUrl}';">
             <div class="article-image-wrap">
                 <img src="${article.image}" alt="${article.title}" class="article-image">
             </div>
@@ -309,3 +310,22 @@ function renderRelatedArticles() {
 document.addEventListener('DOMContentLoaded', function() {
     renderRelatedArticles();
 });
+
+// Save scroll position when leaving homepage
+function saveScrollPosition() {
+    const scrollPos = window.scrollY;
+    localStorage.setItem('homepage_scroll', scrollPos);
+}
+
+// Restore scroll position on homepage load
+function restoreScrollPosition() {
+    const savedPos = localStorage.getItem('homepage_scroll');
+    if (savedPos && window.location.pathname === '/' || window.location.pathname === '/index.html') {
+        setTimeout(() => {
+            window.scrollTo(0, parseInt(savedPos));
+        }, 100);
+    }
+}
+
+// Run on page load
+document.addEventListener('DOMContentLoaded', restoreScrollPosition);
