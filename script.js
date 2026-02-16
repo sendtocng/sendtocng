@@ -7,11 +7,6 @@ const articleUrls = {
     3: 'nfts-digital-ownership.html',
     4: 'market-doesnt-go-straight-up.html'
 };
-
-let currentShareUrl = '';
-let currentShareTitle = '';
-
-// Initialize
 document.addEventListener('DOMContentLoaded', function() {
     loadAndDisplayArticles();
     initializeSearch();
@@ -202,7 +197,8 @@ function initializeShareModal() {
 
 function openShareModal(article) {
     const modal = document.getElementById('share-modal');
-    currentShareUrl = `${window.location.origin}/article.html?id=${article.id}`;
+    const articleUrl = articleUrls[article.id] || 'article.html?id=' + article.id;
+    currentShareUrl = `${window.location.origin}/${articleUrl}`;
     currentShareTitle = article.title;
     modal.classList.add('active');
 }
