@@ -3,6 +3,15 @@
 
 const articles = [
     {
+        id: 6,
+        title: "Hyperliquid: The $20B DEX That's Changing the Game",
+        summary: "Hyperliquid hit $20B in TVL in just 12 months. Here's the tokenomics, the buyback mechanism, and what the 1-year anniversary could mean for holders.",
+        date: "2026-02-16",
+        image: "https://images.unsplash.com/photo-1642790106117-e829e14a795f?w=800&q=80",
+        tags: ["Hyperliquid", "Analysis", "Tokenomics", "DeFi"],
+        content: ``
+    },
+    {
         id: 5,
         title: "How to Spot a Crypto Scam in 2026",
         summary: "I would never point you toward a scam. But not everyone is me. Here's how to spot crypto scams before they take your money.",
