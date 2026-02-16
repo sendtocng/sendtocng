@@ -19,6 +19,12 @@
     <link rel="stylesheet" href="article-styles.css">
 </head>
 <body>
+    <!-- Close button -->
+    <button class="close-article" onclick="window.location.href='index.html'" aria-label="Close article">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+            <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
+    </button>
 
     <main class="article-page">
         <article>
@@ -47,6 +53,21 @@
                 <h2>Another Section</h2>
                 <p>More content...</p>
                 <!-- ARTICLE CONTENT ENDS HERE -->
+
+                <!-- Normie Q&A - Add Q&A for concepts in this article -->
+                <div class="normie-qa" style="background: var(--gray-light); padding: 32px; border-radius: 16px; margin: 40px 0;">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 20px; color: var(--navy);">📚 Normie Q&A</h3>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <p style="font-weight: 600; margin-bottom: 8px;">Q: YOUR QUESTION HERE</p>
+                        <p style="color: var(--gray-dark); margin: 0;">YOUR ANSWER HERE</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 0;">
+                        <p style="font-weight: 600; margin-bottom: 8px;">Q: YOUR QUESTION HERE</p>
+                        <p style="color: var(--gray-dark); margin: 0;">YOUR ANSWER HERE</p>
+                    </div>
+                </div>
             </div>
 
             <footer class="article-footer">

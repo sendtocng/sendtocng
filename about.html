@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - CryptoNews.Global</title>
+    <meta name="description" content="About CryptoNews.Global - Crypto news, digestible. We break down crypto for everyone.">
+    <meta property="og:title" content="About - CryptoNews.Global">
+    <meta property="og:description" content="About CryptoNews.Global - Crypto news, digestible.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="article-styles.css">
+    <style>
+        body { background: #ffffff; }
+        .about-hero {
+            text-align: center;
+            padding: 60px 24px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .about-logo {
+            width: 120px;
+            height: auto;
+            border-radius: 16px;
+            margin-bottom: 24px;
+        }
+        .about-title {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            color: var(--navy);
+        }
+        .about-subtitle {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 40px;
+        }
+        .about-section {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            padding: 0 24px;
+        }
+        .about-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            color: var(--navy);
+        }
+        .about-section p {
+            color: var(--gray-dark);
+            line-height: 1.8;
+        }
+        .close-article {
+            position: fixed;
+            top: 24px;
+            right: 24px;
+            width: 48px;
+            height: 48px;
+            background: var(--btc-orange);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            transition: transform 0.2s;
+        }
+        .close-article:hover {
+            transform: scale(1.1);
+        }
+        .close-article svg {
+            width: 24px;
+            height: 24px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Close button -->
+    <button class="close-article" onclick="window.location.href='index.html'" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+            <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
+    </button>
+
+    <main>
+        <div class="about-hero">
+            <img src="https://i.imgur.com/ri8yEJi.jpeg" alt="CryptoNews.Global" class="about-logo">
+            <h1 class="about-title">About CryptoNews.Global</h1>
+            <p class="about-subtitle">Crypto news, digestible</p>
+        </div>
+
+        <div class="about-section">
+            <h2>Our Mission</h2>
+            <p>Crypto news is broken. It's either too technical, too hype-driven, or written by people who've never touched a trade. We're here to fix that.</p>
+            <p>We break down crypto for everyone. No jargon. No pump and dump signals. Just clear, honest takes on what's actually happening in the market.</p>
+        </div>
+
+        <div class="about-section">
+            <h2>Who This Is For</h2>
+            <p>If you've ever read a crypto article and thought "I have no idea what they just said" — this is for you. If you're a trader, a holder, or just curious about what the fuss is all about — this is for you.</p>
+            <p>We write for the curious, the cautious, and the builders.</p>
+        </div>
+
+        <div class="about-section">
+            <h2>What We Cover</h2>
+            <p>Bitcoin, Ethereum, DeFi, NFTs, new protocols, tokenomics, market analysis — if it matters in crypto, we cover it. But we don't just report the news. We explain why it matters.</p>
+        </div>
+
+        <div class="about-section">
+            <h2>The Normie Q&A</h2>
+            <p>Every article includes a Normie Q&A section — we take the concepts from the article and break them down in plain English. Because learning crypto shouldn't require a computer science degree.</p>
+        </div>
+
+        <div class="about-section">
+            <h2>Get in Touch</h2>
+            <p>Have a topic you want us to cover? Think we missed something? Just want to say hey?</p>
+            <p>Email us at <a href="mailto:SendtoCNG@gmail.com" style="color: var(--btc-orange);">SendtoCNG@gmail.com</a></p>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <a href="mailto:SendtoCNG@gmail.com">Contact</a> ·
+        <a href="index.html">Home</a>
+        <p style="margin-top: 12px; font-size: 0.85rem;">© 2026 CryptoNews.global — All chains, all perspectives</p>
+    </footer>
+</body>
+</html>

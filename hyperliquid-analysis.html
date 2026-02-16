@@ -18,6 +18,13 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="article-styles.css">
 </head>
+    <!-- Close button -->
+    <button class="close-article" onclick="window.location.href='index.html'" aria-label="Close article">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+            <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
+    </button>
+
 <body>
 
     <main class="article-page">
@@ -132,6 +139,31 @@
                 <p>Worth watching. Worth understanding. Maybe worth owning if you've done your own research on the timing of unlocks and your personal risk tolerance.</p>
 
                 <p>That's the analysis. The numbers speak for themselves.</p>
+
+                <!-- Normie Q&A -->
+                <div class="normie-qa" style="background: var(--gray-light); padding: 32px; border-radius: 16px; margin: 40px 0;">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 20px; color: var(--navy);">📚 Normie Q&A</h3>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <p style="font-weight: 600; margin-bottom: 8px;">Q: What is TVL?</p>
+                        <p style="color: var(--gray-dark); margin: 0;">A: TVL stands for "Total Value Locked." It means how much money people have staked in a DeFi protocol. More TVL = more people trust and use it. Hyperliquid has $20B+ locked in — that's huge.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <p style="font-weight: 600; margin-bottom: 8px;">Q: What is a perpetual?</p>
+                        <p style="color: var(--gray-dark); margin: 0;">A: A perpetual contract is like a futures trade that never expires. You can bet on the price going up or down without ever buying the actual asset. 50x leverage means you can trade with 50x the money you have (high risk, high reward).</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <p style="font-weight: 600; margin-bottom: 8px;">Q: What is a buyback?</p>
+                        <p style="color: var(--gray-dark); margin: 0;">A: When a protocol makes money (from fees), it can use that money to buy its own token from the market. This pushes the price up and gives value to people who hold the token. Hyperliquid does this with trading fees.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 0;">
+                        <p style="font-weight: 600; margin-bottom: 8px;">Q: What is staking?</p>
+                        <p style="color: var(--gray-dark); margin: 0;">A: Staking means locking up your tokens to help secure the network. In return, you earn rewards. With Hyperliquid, staking $HYPE gives you a share of the buyback rewards — essentially a dividend from the fees traders pay.</p>
+                    </div>
+                </div>
             </div>
 
             <footer class="article-footer">
