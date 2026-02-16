@@ -74,7 +74,7 @@ a {
    ======================================== */
 .site-header {
     background: var(--navy);
-    padding: 20px 0;
+    padding: 16px 0;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -85,24 +85,26 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
 .logo-link {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     text-decoration: none;
+    flex-shrink: 0;
 }
 
 .header-logo {
-    height: 42px;
+    height: 36px;
     width: auto;
-    border-radius: 8px;
+    border-radius: 6px;
 }
 
 .site-name {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: white;
     letter-spacing: -0.5px;
@@ -114,26 +116,55 @@ a {
 
 .tagline {
     color: var(--gray);
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     margin: 0;
-    flex: 1;
+    order: 3;
+    width: 100%;
     text-align: center;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    margin-top: 8px;
+    display: none;
 }
 
 .header-btn.subscribe-btn {
     background: var(--btc-orange);
     color: white;
-    padding: 10px 20px;
+    padding: 10px 18px;
     border-radius: 8px;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     border: none;
     cursor: pointer;
     transition: background 0.2s;
+    flex-shrink: 0;
 }
 
 .header-btn.subscribe-btn:hover {
     background: #d99900;
+}
+
+/* Mobile responsive */
+@media (min-width: 600px) {
+    .tagline {
+        display: block;
+        order: 2;
+        width: auto;
+        flex: 1;
+        text-align: center;
+        border-top: none;
+        padding-top: 0;
+        margin-top: 0;
+        border: none;
+    }
+    
+    .header-logo {
+        height: 42px;
+    }
+    
+    .site-name {
+        font-size: 1.4rem;
+    }
 }
 
 .logo {
