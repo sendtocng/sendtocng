@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     loadAndDisplayArticles();
     initializeSearch();
     initializeShareModal();
+    checkForTagFilter();
 });
 
 // Load and display articles
@@ -73,7 +74,7 @@ function createHeroCard(article) {
 // Article card (grid)
 function createArticleCard(article) {
     const formattedDate = formatDate(article.date);
-    const tagsHTML = article.tags.slice(0, 2).map(tag => `<span class="tag-sm">${tag}</span>`).join('');
+    const tagsHTML = article.tags.slice(0, 2).map(tag => `<span class="tag-sm" onclick="filterByTag('${tag}'); event.stopPropagation();">${tag}</span>`).join('');
     
     return `
         <div class="article-card" data-article-id="${article.id}">
@@ -91,6 +92,26 @@ function createArticleCard(article) {
             </div>
         </div>
     `;
+}
+
+// Filter by tag
+function filterByTag(tag) {
+    const url = new URL(window.location);
+    url.searchParams.set('tag', tag);
+    window.location.href = url.toString();
+}
+
+// Check for tag filter on load
+function checkForTagFilter() {
+    const params = new URLSearchParams(window.location.search);
+    const tag = params.get('tag');
+    if (tag) {
+        const searchInput = document.getElementById('search-input');
+        if (searchInput) {
+            searchInput.value = tag;
+            searchInput.dispatchEvent(new Event('input'));
+        }
+    }
 }
 
 // Format date
