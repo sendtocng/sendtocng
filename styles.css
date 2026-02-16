@@ -118,13 +118,7 @@ a {
     color: var(--gray);
     font-size: 0.85rem;
     margin: 0;
-    order: 3;
-    width: 100%;
     text-align: center;
-    padding-top: 8px;
-    border-top: 1px solid rgba(255,255,255,0.05);
-    margin-top: 8px;
-    display: none;
 }
 
 .header-btn.subscribe-btn {
@@ -146,18 +140,6 @@ a {
 
 /* Mobile responsive */
 @media (min-width: 600px) {
-    .tagline {
-        display: block;
-        order: 2;
-        width: auto;
-        flex: 1;
-        text-align: center;
-        border-top: none;
-        padding-top: 0;
-        margin-top: 0;
-        border: none;
-    }
-    
     .header-logo {
         height: 42px;
     }
