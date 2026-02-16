@@ -19,32 +19,31 @@
     <link rel="stylesheet" href="article-styles.css">
 </head>
 <body>
-    <header class="site-header-small article-nav-header">
-        <div class="container">
-            <div class="header-row">
-                <div class="logo">
-                    <a href="index.html"><img src="https://i.imgur.com/ri8yEJi.jpeg" alt="CryptoNews.Global" height="40"></a>
-                </div>
-                <div class="header-actions">
-                    <a href="index.html" class="header-btn home-btn">Home</a>
-                </div>
-            </div>
-        </div>
-    </header>
+    <!-- Simple Top Bar -->
+    <div class="article-top-bar">
+        <a href="https://x.com/CryptoNewsGlbl" target="_blank" class="twitter-follow-mini">
+            <svg class="twitter-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+            Follow
+        </a>
+        <a href="index.html" class="back-to-home">
+            Home
+            <span class="back-arrow">→</span>
+        </a>
+    </div>
 
     <main class="article-page">
         <article>
             <header class="article-header">
-                <div class="article-meta">
-                    <span class="article-date">February 15, 2026</span>
-                </div>
-                <div class="article-tags">
-                    <span class="tag-sm">DeFi</span>
-                    <span class="tag-sm">Yield</span>
-                    <span class="tag-sm">Finance</span>
-                </div>
                 <h1 class="article-main-title">DeFi Explained: How Regular People Are Earning 10%+ on Their Money</h1>
+                <p class="article-date-centered">February 15, 2026</p>
                 <p class="article-subtitle">Banks give you 0.01% APY. DeFi can give you 10%+. Here's how it works and what's the catch.</p>
+                <div class="article-tags">
+                    <a href="index.html?tag=DeFi" class="tag-sm">DeFi</a>
+                    <a href="index.html?tag=Yield" class="tag-sm">Yield</a>
+                    <a href="index.html?tag=Finance" class="tag-sm">Finance</a>
+                </div>
             </header>
 
             <div class="article-hero">
@@ -114,25 +113,13 @@
                 </div>
             </footer>
         </article>
-
-        <div class="back-link">
-            <a href="index.html">← Back to all articles</a>
-        </div>
     </main>
 
     <footer class="site-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <a href="https://x.com/CryptoNewsGlbl" target="_blank" class="footer-twitter">Follow us on X</a>
-                </div>
-                <div class="footer-links">
-                    <a href="index.html">Home</a>
-                    <a href="mailto:SendtoCNG@gmail.com">Contact</a>
-                </div>
-            </div>
-            <p class="footer-copy">© 2026 CryptoNews.global — All chains, all perspectives</p>
-        </div>
+        <a href="https://x.com/CryptoNewsGlbl" target="_blank">Follow us on X</a> ·
+        <a href="index.html">Home</a> ·
+        <a href="mailto:SendtoCNG@gmail.com">Contact</a>
+        <p style="margin-top: 12px; font-size: 0.85rem;">© 2026 CryptoNews.global — All chains, all perspectives</p>
     </footer>
 
     <script>
