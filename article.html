@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="article-title">Article - CryptoNews.global</title>
+    <meta name="description" content="Crypto news explained simply. No jargon, no hype.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="article-styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header-small article-nav-header">
+        <div class="container">
+            <div class="header-row">
+                <div class="logo">
+                    <a href="index.html"><img src="https://i.imgur.com/ri8yEJi.jpeg" alt="CryptoNews.Global" height="40"></a>
+                </div>
+                <div class="header-actions">
+                    <a href="index.html" class="header-btn home-btn">Home</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article -->
+    <main class="article-page">
+        <article>
+            <!-- Header -->
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date" id="article-date"></span>
+                    <div class="article-tags" id="article-tags"></div>
+                </div>
+                <h1 class="article-main-title" id="article-main-title"></h1>
+                <p class="article-subtitle" id="article-subtitle"></p>
+            </header>
+
+            <!-- Hero Image -->
+            <div class="article-hero">
+                <img id="article-hero-image" alt="">
+            </div>
+
+            <!-- Body -->
+            <div class="article-body" id="article-body"></div>
+
+            <!-- Footer -->
+            <footer class="article-footer">
+                <div class="share-section">
+                    <h3>Share this article</h3>
+                    <div class="share-buttons-inline">
+                        <button class="share-btn-small twitter" data-platform="twitter">
+                            <span>𝕏</span> Twitter
+                        </button>
+                        <button class="share-btn-small reddit" data-platform="reddit">
+                            <span>🔗</span> Reddit
+                        </button>
+                        <button class="share-btn-small copy" data-platform="copy">
+                            <span>📋</span> Copy Link
+                        </button>
+                    </div>
+                </div>
+
+                <div class="newsletter-cta">
+                    <h3>Get crypto news for normies</h3>
+                    <p>Honest takes on crypto, delivered to your inbox. No spam, just signal.</p>
+                    <form action="https://formspree.io/f/xzdarlnp" method="POST" class="subscribe-form">
+                        <input type="email" name="email" placeholder="Enter your email" required class="subscribe-input">
+                        <button type="submit" class="cta-button">Subscribe</button>
+                    </form>
+                </div>
+            </footer>
+        </article>
+
+        <!-- Back -->
+        <div class="back-link">
+            <a href="index.html">← Back to all articles</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="https://x.com/CryptoNewsGlbl" target="_blank" class="footer-twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                        Follow us on X
+                    </a>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="mailto:SendtoCNG@gmail.com">Contact</a>
+                    <a href="admin.html">Admin</a>
+                </div>
+            </div>
+            <p class="footer-copy">© 2026 CryptoNews.global — All chains, all perspectives</p>
+        </div>
+    </footer>
+
+    <script src="articles.js"></script>
+    <script src="article.js"></script>
+</body>
+</html>
