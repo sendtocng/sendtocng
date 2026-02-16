@@ -1,5 +1,13 @@
 // CryptoNews.Global - Main JavaScript
 
+// Article URL mapping - maps article IDs to static HTML files for SEO
+const articleUrls = {
+    1: 'bitcoin-70k.html',
+    2: 'defi-explained.html',
+    3: 'nfts-digital-ownership.html',
+    4: 'market-doesnt-go-straight-up.html'
+};
+
 let currentShareUrl = '';
 let currentShareTitle = '';
 
@@ -39,7 +47,9 @@ function loadAndDisplayArticles() {
             card.addEventListener('click', function(e) {
                 if (!e.target.closest('.share-button')) {
                     const id = this.dataset.articleId;
-                    window.location.href = `article.html?id=${id}`;
+                    // Use static URL for SEO
+                    const url = articleUrls[id] || 'article.html?id=' + id;
+                    window.location.href = url;
                 }
             });
         });
@@ -50,6 +60,8 @@ function loadAndDisplayArticles() {
 function createHeroCard(article) {
     const formattedDate = formatDate(article.date);
     const tagsHTML = article.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+    // Use static URL for SEO
+    const articleUrl = articleUrls[article.id] || 'article.html?id=' + article.id;
     
     return `
         <div class="hero-image">
@@ -61,7 +73,7 @@ function createHeroCard(article) {
             <h2 class="hero-title">${article.title}</h2>
             <p class="hero-summary">${article.summary}</p>
             <div class="hero-tags">${tagsHTML}</div>
-            <a href="article.html?id=${article.id}" class="hero-cta">
+            <a href="${articleUrl}" class="hero-cta">
                 Read Article
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
