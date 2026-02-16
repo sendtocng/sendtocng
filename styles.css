@@ -18,7 +18,7 @@
     
     /* Gradients */
     --gradient-warm: linear-gradient(135deg, var(--btc-orange) 0%, var(--btc-orange-light) 100%);
-    --gradient-dark: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+    
     
     /* Shadows */
     --shadow-sm: 0 2px 8px rgba(247, 147, 26, 0.08);
@@ -73,40 +73,67 @@ a {
    HEADER - Big & Bold
    ======================================== */
 .site-header {
-    background: var(--gradient-dark);
-    padding: 48px 0;
-    position: relative;
-    overflow: hidden;
-}
-
-.site-header::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -10%;
-    width: 400px;
-    height: 400px;
-    background: var(--btc-orange);
-    opacity: 0.1;
-    border-radius: 50%;
-    filter: blur(60px);
-}
-
-.site-header::after {
-    content: '₿';
-    position: absolute;
-    right: 5%;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 280px;
-    opacity: 0.03;
-    color: var(--btc-orange);
-    font-weight: 700;
+    background: var(--navy);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .header-content {
-    position: relative;
-    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.header-logo {
+    height: 42px;
+    width: auto;
+    border-radius: 8px;
+}
+
+.site-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: -0.5px;
+}
+
+.site-name .dot {
+    color: var(--btc-orange);
+}
+
+.tagline {
+    color: var(--gray);
+    font-size: 0.95rem;
+    margin: 0;
+    flex: 1;
+    text-align: center;
+}
+
+.header-btn.subscribe-btn {
+    background: var(--btc-orange);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.header-btn.subscribe-btn:hover {
+    background: #d99900;
 }
 
 .logo {
