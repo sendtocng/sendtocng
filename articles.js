@@ -3,6 +3,15 @@
 
 const articles = [
     {
+        id: 7,
+        title: "Strategy's Bitcoin Bet: Genius or Disaster?",
+        summary: "Deep dive into Strategy (formerly MicroStrategy) — the largest corporate Bitcoin holder. We break down their $49B BTC stash, debt load, and why bears think it's a 'planned dump on retail.'",
+        date: "2026-02-17",
+        image: "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=800&q=80",
+        tags: ["Bitcoin", "Macro", "Strategy", "Corporate"],
+        content: ``
+    },
+    {
         id: 6,
         title: "Hyperliquid: The $20B DEX That's Changing the Game",
         summary: "Hyperliquid hit $20B in TVL in just 12 months. Here's the tokenomics, the buyback mechanism, and what the 1-year anniversary could mean for holders.",
