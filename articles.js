@@ -3,6 +3,15 @@
 
 const articles = [
     {
+        id: 8,
+        title: "Hyperliquid Launches $29 Million Washington Lobbying Push — And It's a Big Deal",
+        summary: "Hyperliquid just dropped $29 million to lobby Washington on DeFi. Here's why this matters for crypto regulation and what it means for traders.",
+        date: "2026-02-18",
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+        tags: ["DeFi", "Regulation", "Hyperliquid", "Policy"],
+        content: ``
+    },
+    {
         id: 7,
         title: "Strategy's Bitcoin Bet: Genius or Disaster?",
         summary: "Deep dive into Strategy (formerly MicroStrategy) — the largest corporate Bitcoin holder. We break down their $49B BTC stash, debt load, and why bears think it's a 'planned dump on retail.'",

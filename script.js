@@ -7,7 +7,8 @@ const articleUrls = {
     3: 'nfts-digital-ownership.html',
     4: 'market-doesnt-go-straight-up.html',
     5: 'how-to-spot-crypto-scam.html',
-    6: 'hyperliquid-analysis.html'
+    6: 'hyperliquid-analysis.html',
+    8: 'hyperliquid-policy-lobby.html'
 };
 document.addEventListener('DOMContentLoaded', function() {
     loadAndDisplayArticles();
