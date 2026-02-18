@@ -8,6 +8,7 @@ const articleUrls = {
     4: 'market-doesnt-go-straight-up.html',
     5: 'how-to-spot-crypto-scam.html',
     6: 'hyperliquid-analysis.html',
+    7: 'strategy-bitcoin-bet.html',
     8: 'hyperliquid-policy-lobby.html'
 };
 document.addEventListener('DOMContentLoaded', function() {
