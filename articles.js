@@ -3,6 +3,15 @@
 
 const articles = [
     {
+        id: 9,
+        title: "OpenAI Drops a New Crypto Tool — And It's a Big Deal for AI Agents",
+        summary: "OpenAI and Paradigm released evm-bench, a tool that tests how well AI agents handle smart contracts. Here's why it matters for the future of DeFi.",
+        date: "2026-02-18",
+        image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80",
+        tags: ["AI", "Tools", "OpenAI", "Paradigm"],
+        content: ``
+    },
+    {
         id: 8,
         title: "Hyperliquid Launches $29 Million Washington Lobbying Push — And It's a Big Deal",
         summary: "Hyperliquid just dropped $29 million to lobby Washington on DeFi. Here's why this matters for crypto regulation and what it means for traders.",

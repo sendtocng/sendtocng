@@ -9,7 +9,8 @@ const articleUrls = {
     5: 'how-to-spot-crypto-scam.html',
     6: 'hyperliquid-analysis.html',
     7: 'strategy-bitcoin-bet.html',
-    8: 'hyperliquid-policy-lobby.html'
+    8: 'hyperliquid-policy-lobby.html',
+    9: 'evm-bench.html'
 };
 document.addEventListener('DOMContentLoaded', function() {
     loadAndDisplayArticles();
