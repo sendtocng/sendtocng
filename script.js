@@ -19,6 +19,11 @@ document.addEventListener('DOMContentLoaded', function() {
     checkForTagFilter();
 });
 
+// Load articles from articles.js
+function loadArticles() {
+    return articles;
+}
+
 // Load and display articles
 function loadAndDisplayArticles() {
     const allArticles = loadArticles();
